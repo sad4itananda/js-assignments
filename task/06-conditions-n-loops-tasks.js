@@ -30,7 +30,10 @@
  *
  */
 function getFizzBuzz(num) {
-    throw new Error('Not implemented');
+   if (num % 3 == 0 && num % 5 == 0) return 'FizzBuzz';
+   if (num % 3 == 0 ) return 'Fizz'; 
+   if (num % 5 == 0 ) return 'Buzz'; 
+   return num;
 }
 
 
@@ -46,9 +49,8 @@ function getFizzBuzz(num) {
  *   10 => 3628800
  */
 function getFactorial(n) {
-    throw new Error('Not implemented');
-}
-
+    return (n != 1) ? n * getFactorial(n - 1) : 1;
+   };
 
 /**
  * Returns the sum of integer numbers between n1 and n2 (inclusive).
@@ -63,7 +65,11 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-    throw new Error('Not implemented');
+   let count = n1 + 1, res = n1;
+   while (count <= n2) {
+    res += count; count++;
+   }
+   return res; 
 }
 
 
